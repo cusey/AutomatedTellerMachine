@@ -18,7 +18,16 @@ namespace AutomatedTellerMachine.Controllers
         //GET /Home/About
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "The Countries which Summer Time Bank operates in.";
+
+            ViewBag.Countries = new List<String>()
+            {
+                "India",
+                "United States",
+                "Canada",
+                "Kenya"
+
+            };
 
             return View();
         }
