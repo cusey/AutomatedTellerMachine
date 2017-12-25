@@ -29,5 +29,17 @@ namespace AutomatedTellerMachine.Controllers
 
             return View();
         }
+
+        public ActionResult Serial(string letterCase)
+        {
+            var serial = "STB 18.01.30.05";
+
+            if( letterCase == "lower")
+            {
+                return Content(serial.ToLower());
+            }
+
+            return Content(serial);
+        }
     }
 }
