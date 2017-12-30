@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.SqlClient;
 
 namespace AutomatedTellerMachine.Controllers
 {
@@ -40,9 +41,37 @@ namespace AutomatedTellerMachine.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Contact(string message)
+        public ActionResult Contact(string customerMessage)
         {
+
+            SqlCommand cmd = new SqlCommand();
+
             ViewBag.CustomerMessage = "Thanks, we got your message !";
+
+            string connectionString =
+            "Data Source=DESKTOP-CV57V7N\\SQLEXPRESS;Initial Catalog=SummerTimeBank;"
+            +"Integrated Security=True";
+
+            cmd.CommandText = "INSERT INTO  dbo.comments (message) VALUES ('"+ customerMessage + "')";
+
+            using (SqlConnection conn =
+            new SqlConnection(connectionString))
+            {
+                conn.Open();
+                cmd.Connection = conn;
+
+                try
+                {
+                    
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
         
           return View();
         }
