@@ -22,6 +22,29 @@ namespace AutomatedTellerMachine.Controllers
             return View(checkingAccount);
         }
 
+        //GET: CheckingAccount/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        //POST: CheckingAccount/Create
+        [HttpPost]
+        public ActionResult Create(FormCollection collection)
+        {
+            try
+            {
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+            
+        }
+
+
+
 
     }
 }
