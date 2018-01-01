@@ -9,14 +9,14 @@ namespace AutomatedTellerMachine.Controllers
 {
     public class HomeController : Controller
     {
-        //GET /Home/Index
+        //GET: /Home/Index
         public ActionResult Index()
         {
             return View();
         }
 
 
-        //GET /Home/About
+        //GET: /Home/About
         public ActionResult About()
         {
             ViewBag.Message = "The Countries which Summer Time Bank operates in.";
@@ -76,6 +76,7 @@ namespace AutomatedTellerMachine.Controllers
           return View();
         }
 
+        //GET: /Home/Serial/lower
         public ActionResult Serial(string letterCase)
         {
             var serial = "STB 18.01.30.05";
