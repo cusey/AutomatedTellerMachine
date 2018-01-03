@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutomatedTellerMachine.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -48,14 +49,12 @@ namespace AutomatedTellerMachine.Controllers
 
             ViewBag.CustomerMessage = "Thanks, we got your message !";
 
-            string connectionString =
-            "Data Source=DESKTOP-CV57V7N\\SQLEXPRESS;Initial Catalog=SummerTimeBank;"
-            +"Integrated Security=True";
-
+            var database = new Database();
+            
             cmd.CommandText = "INSERT INTO  dbo.comments (message) VALUES ('"+ customerMessage + "')";
 
             using (SqlConnection conn =
-            new SqlConnection(connectionString))
+            new SqlConnection(database.connectionString))
             {
                 conn.Open();
                 cmd.Connection = conn;
