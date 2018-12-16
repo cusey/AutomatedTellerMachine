@@ -1,4 +1,20 @@
-# AutomatedTellerMachine   
+![CuseyHub](https://github.com/cusey/ImageForWiki/blob/master/Logos/CuseyHub_Banner_Small.jpg)  
 
-![.Net](https://github.com/cusey/ImageForWiki/blob/master/Logos/Net.PNG)    
+# Automated Teller Machine   
+
+![]()  
+<img 
+src="https://github.com/cusey/ImageForWiki/blob/master/Logos/Net.PNG" 
+alt=".Net" 
+height="50px"/> 
+
+## Built With
+* .Net MVC
+* Microsoft Visual Studio    
+
+## Authors
+* John Cusey - CuseyHub  
+
+## License   
+This project is licensed under the MIT License
 ASP NET MVC 5    
