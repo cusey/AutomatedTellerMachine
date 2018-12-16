@@ -9,7 +9,7 @@ alt=".Net"
 height="50px"/> 
 
 ## Built With
-* .Net MVC
+* NET MVC 5
 * Microsoft Visual Studio    
 
 ## Authors
@@ -17,4 +17,4 @@ height="50px"/>
 
 ## License   
 This project is licensed under the MIT License
-ASP NET MVC 5    
+    
