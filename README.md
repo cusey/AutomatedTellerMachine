@@ -2,7 +2,6 @@
 
 # Automated Teller Machine   
 
-![]()  
 <img 
 src="https://github.com/cusey/ImageForWiki/blob/master/Logos/Net.PNG" 
 alt=".Net" 
